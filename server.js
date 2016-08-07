@@ -6,7 +6,7 @@ app.listen(port, function(){
   console.log('Listening on port ' + port);
 });
 
-app.get('/', function(req, res){
+app.get('/api/whoami/', function(req, res){
   var ip = req.ip;
   var language = req.get("accept-language").split(',')[0];
   var os = parser(req.get('User-Agent')).os;
